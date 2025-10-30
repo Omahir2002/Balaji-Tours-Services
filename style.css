@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #fff3b0, #ffe680); /* lighter yellow */
+    color: #333;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #ffd700;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Car Animation */
+.car-animation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 40px;
+}
+
+.car {
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    transition: transform 2s ease-in-out;
+}
+
+.car-left {
+    left: -200px;
+    animation: moveLeftCar 6s infinite alternate;
+}
+
+.car-right {
+    right: -200px;
+    animation: moveRightCar 6s infinite alternate;
+}
+
+@keyframes moveLeftCar {
+    0% { left: -200px; }
+    100% { left: 50px; }
+}
+
+@keyframes moveRightCar {
+    0% { right: -200px; }
+    100% { right: 50px; }
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #ffe680, #fff3b0);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 350px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background: #ff8c00;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #e67600;
+}
+
+.company-info {
+    max-width: 300px;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.company-info h3 {
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+.company-info p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.company-info p a:hover {
+    color: #ff8c00;
+}
+
+/* WhatsApp Chat */
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-chat img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 0.9em;
+}

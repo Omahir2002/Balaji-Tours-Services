@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Taxi Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/car--v1.png">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <h1>Balaji Taxi Services</h1>
+            <p>Reliable, Affordable, and Comfortable Taxi Services</p>
+        </div>
+        <div class="car-animation">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Maruti_Suzuki_Ertiga_2019.jpg" alt="Ertiga" class="car car-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Maruti_Suzuki_Urbana.png" alt="Urbania" class="car car-right">
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Airport Pickup & Drop</h3>
+                <p>Safe and timely airport transfers at best prices.</p>
+            </div>
+            <div class="service-card">
+                <h3>In-City Rides</h3>
+                <p>Travel anywhere in the city with comfort and convenience.</p>
+            </div>
+            <div class="service-card">
+                <h3>Outstation Trips</h3>
+                <p>Long-distance rides at competitive prices for outstation trips.</p>
+            </div>
+            <div class="service-card">
+                <h3>Local Rides</h3>
+                <p>Quick and affordable rides for your daily commute.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Book Your Ride</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Your Message / Ride Details" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="company-info">
+                <h3>Contact Info</h3>
+                <p>Phone: <a href="tel:+916351370390">+91 6351370390</a></p>
+                <p>Email: <a href="mailto:omgahir@gmail.com">omgahir@gmail.com</a></p>
+                <p>We will contact you shortly to confirm your ride!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/916351370390" class="whatsapp-chat" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Chat on WhatsApp">
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Balaji Taxi Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form submission alert
+        document.getElementById('contactForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert("Thank you! Your details have been submitted. We will contact you soon.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
