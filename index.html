@@ -12,23 +12,54 @@
       background: linear-gradient(135deg, #fff7b2, #ffe066 70%);
       color: #222;
     }
+
+    /* ===== HEADER WITH LOGO ===== */
     header {
-      text-align: center;
-      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       background: rgba(255,224,102,0.5);
       position: relative;
+      padding: 2rem 1rem 1.5rem 1rem;
+      text-align: center;
     }
+
+    .logo-container {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .logo-container span {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #222;
+    }
+
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.4rem;
       letter-spacing: 2px;
       font-weight: 700;
     }
+
     header p {
       font-size: 1.3rem;
       margin: 0.4rem 0;
       color: #444;
     }
+
+    /* ===== FEATURE BOXES ===== */
     .features, .community {
       display: flex;
       flex-wrap: wrap;
@@ -36,6 +67,7 @@
       justify-content: center;
       margin: 2.5rem 0;
     }
+
     .feature-box {
       background: #fff;
       border-radius: 18px;
@@ -45,18 +77,23 @@
       text-align: center;
       transition: transform 0.15s;
     }
+
     .feature-box:hover {
       transform: translateY(-4px) scale(1.04);
     }
+
     .feature-box h3 {
       color: #e67e22;
       font-size: 1.13rem;
       margin-bottom: 0.57rem;
     }
+
     .feature-box p {
       font-size: 0.98rem;
       color: #555;
     }
+
+    /* ===== BOOKING FORM ===== */
     .booking-form {
       background: #fffde5;
       border-radius: 20px;
@@ -66,11 +103,13 @@
       margin: 2.2rem auto 3rem auto;
       text-align: center;
     }
+
     .booking-form h2 {
       margin-bottom: 1.9rem;
       font-size: 1.55rem;
       color: #333;
     }
+
     .booking-form input, .booking-form select {
       width: 100%;
       padding: 0.92rem;
@@ -79,6 +118,7 @@
       border-radius: 9px;
       font-size: 1rem;
     }
+
     .booking-form button {
       background: #ffe066;
       color: #333;
@@ -91,9 +131,12 @@
       cursor: pointer;
       transition: background 0.15s;
     }
+
     .booking-form button:hover {
       background: #fac91b;
     }
+
+    /* ===== COMMUNITY SECTION ===== */
     .community {
       background: #fff8e6;
       border-radius: 18px;
@@ -102,17 +145,21 @@
       margin-bottom: 2.6rem;
       flex-wrap: wrap;
     }
+
     .community-box {
       flex: 1;
       min-width: 220px;
       margin: 0 1rem;
       text-align: center;
     }
+
     .community-box h4 {
       font-size: 1.13rem;
       color: #ba8800;
       margin-bottom: 0.36rem;
     }
+
+    /* ===== FOOTER ===== */
     .footer {
       text-align: center;
       background: #ffe066;
@@ -121,10 +168,15 @@
       padding: 1.3rem 0 0.3rem 0;
       border-top: 2px solid #fbe99f;
     }
+
     @media (max-width: 800px) {
       .features, .community {
         flex-direction: column;
         align-items: center;
+      }
+
+      .logo-container img {
+        width: 55px;
       }
     }
   </style>
@@ -132,6 +184,12 @@
 <body>
 
   <header>
+    <!-- ✅ LOGO SECTION ADDED -->
+    <div class="logo-container">
+      <img src="logo.png" alt="Balaji Taxi Logo">
+      <span>Balaji Taxi</span>
+    </div>
+
     <h1>Balaji Road Traveler Taxi</h1>
     <p>Reliable, Affordable, and Enjoyable Journeys for Every Traveler</p>
     <p><em>Discover. Book. Explore.</em></p>
