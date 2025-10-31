@@ -1,85 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balaji Taxi Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://img.icons8.com/color/48/car--v1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Balaji Road Traveler Taxi</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(135deg, #fff7b2, #ffe066 70%);
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(255,224,102,0.5);
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin: 0.4rem 0;
+      color: #444;
+    }
+    .features, .community {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2.5rem 0;
+    }
+    .feature-box {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #fac91b22;
+      max-width: 250px;
+      padding: 1.4rem 1rem;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .feature-box:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+    .feature-box h3 {
+      color: #e67e22;
+      font-size: 1.13rem;
+      margin-bottom: 0.57rem;
+    }
+    .feature-box p {
+      font-size: 0.98rem;
+      color: #555;
+    }
+    .booking-form {
+      background: #fffde5;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px #fac91b34;
+      padding: 2.5rem 1.9rem;
+      max-width: 400px;
+      margin: 2.2rem auto 3rem auto;
+      text-align: center;
+    }
+    .booking-form h2 {
+      margin-bottom: 1.9rem;
+      font-size: 1.55rem;
+      color: #333;
+    }
+    .booking-form input, .booking-form select {
+      width: 100%;
+      padding: 0.92rem;
+      margin-bottom: 1.1rem;
+      border: 1px solid #ffe066;
+      border-radius: 9px;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #ffe066;
+      color: #333;
+      padding: 0.9rem 0;
+      border: none;
+      border-radius: 9px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .booking-form button:hover {
+      background: #fac91b;
+    }
+    .community {
+      background: #fff8e6;
+      border-radius: 18px;
+      box-shadow: 0 0px 24px #fac91b28;
+      padding: 2.2rem 0;
+      margin-bottom: 2.6rem;
+      flex-wrap: wrap;
+    }
+    .community-box {
+      flex: 1;
+      min-width: 220px;
+      margin: 0 1rem;
+      text-align: center;
+    }
+    .community-box h4 {
+      font-size: 1.13rem;
+      color: #ba8800;
+      margin-bottom: 0.36rem;
+    }
+    .footer {
+      text-align: center;
+      background: #ffe066;
+      color: #7a5400;
+      font-size: 1.01rem;
+      padding: 1.3rem 0 0.3rem 0;
+      border-top: 2px solid #fbe99f;
+    }
+    @media (max-width: 800px) {
+      .features, .community {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container header-container">
-            <h1>Balaji Taxi Services</h1>
-            <p>Reliable, Affordable, and Comfortable Taxi Services</p>
-        </div>
-        <div class="car-animation">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Maruti_Suzuki_Ertiga_2019.jpg" alt="Ertiga" class="car car-left">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Maruti_Suzuki_Urbana.png" alt="Urbania" class="car car-right">
-        </div>
-    </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service-card">
-                <h3>Airport Pickup & Drop</h3>
-                <p>Safe and timely airport transfers at best prices.</p>
-            </div>
-            <div class="service-card">
-                <h3>In-City Rides</h3>
-                <p>Travel anywhere in the city with comfort and convenience.</p>
-            </div>
-            <div class="service-card">
-                <h3>Outstation Trips</h3>
-                <p>Long-distance rides at competitive prices for outstation trips.</p>
-            </div>
-            <div class="service-card">
-                <h3>Local Rides</h3>
-                <p>Quick and affordable rides for your daily commute.</p>
-            </div>
-        </div>
-    </section>
+  <header>
+    <h1>Balaji Road Traveler Taxi</h1>
+    <p>Reliable, Affordable, and Enjoyable Journeys for Every Traveler</p>
+    <p><em>Discover. Book. Explore.</em></p>
+  </header>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Book Your Ride</h2>
-        <div class="contact-container">
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <textarea name="message" placeholder="Your Message / Ride Details" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div class="company-info">
-                <h3>Contact Info</h3>
-                <p>Phone: <a href="tel:+916351370390">+91 6351370390</a></p>
-                <p>Email: <a href="mailto:omgahir@gmail.com">omgahir@gmail.com</a></p>
-                <p>We will contact you shortly to confirm your ride!</p>
-            </div>
-        </div>
-    </section>
+  <section class="features">
+    <div class="feature-box">
+      <h3>Instant Book & Tracking</h3>
+      <p>Book and track your taxi anytime for peace of mind.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Personalized Suggestions</h3>
+      <p>Get smart trip stops, cafes and sightseeing ideas on the go.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Multiple Vehicle Choices</h3>
+      <p>Options for solo, family, or adventurous rides.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Eco-Friendly Options</h3>
+      <p>Choose green taxis and see your CO₂ savings instantly.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Traveler Discounts</h3>
+      <p>Exclusive offers for frequent and long-route bookers.</p>
+    </div>
+  </section>
 
-    <!-- WhatsApp Chat -->
-    <a href="https://wa.me/916351370390" class="whatsapp-chat" target="_blank">
-        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Chat on WhatsApp">
-    </a>
+  <form class="booking-form">
+    <h2>Book Your Adventure</h2>
+    <input type="text" placeholder="Origin City/Location" required>
+    <input type="text" placeholder="Destination" required>
+    <input type="datetime-local" required>
+    <select required>
+      <option value="">Select Vehicle Type</option>
+      <option value="solo">Solo</option>
+      <option value="family">Family</option>
+      <option value="adventure">Adventure</option>
+      <option value="eco">Eco-Friendly</option>
+    </select>
+    <input type="text" placeholder="Special Requests (optional)">
+    <button type="submit">Book My Journey</button>
+  </form>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Balaji Taxi Services. All Rights Reserved.</p>
-    </footer>
+  <section class="community">
+    <div class="community-box">
+      <h4>Traveler’s Log</h4>
+      <p>Share your trips, stories, & travel snaps.</p>
+    </div>
+    <div class="community-box">
+      <h4>Roadtrip Ideas</h4>
+      <p>Handpicked routes and memorable escapes.</p>
+    </div>
+    <div class="community-box">
+      <h4>WhatsApp Support</h4>
+      <p>Chat or share your booking instantly for help and info.</p>
+    </div>
+  </section>
 
-    <script>
-        // Simple form submission alert
-        document.getElementById('contactForm').addEventListener('submit', function(e){
-            e.preventDefault();
-            alert("Thank you! Your details have been submitted. We will contact you soon.");
-            this.reset();
-        });
-    </script>
+  <footer class="footer">
+    <div>About Balaji | Join as Driver | Careers | FAQs | Contact Us</div>
+    <div style="margin-top:8px;">&copy; 2025 Balaji Road Traveler Taxi. All rights reserved.</div>
+  </footer>
 </body>
 </html>
