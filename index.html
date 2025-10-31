@@ -13,7 +13,7 @@
       color: #222;
     }
 
-    /* ===== HEADER WITH LOGO ===== */
+    /* ===== HEADER ===== */
     header {
       display: flex;
       align-items: center;
@@ -25,25 +25,10 @@
       text-align: center;
     }
 
-    .logo-container {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-container img {
-      width: 180px; /* Adjust logo size here */
+    header img {
+      width: 180px;
       height: auto;
-      border-radius: 10px;
-    }
-
-    .logo-container span {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #222;
+      margin-bottom: 12px;
     }
 
     header h1 {
@@ -59,7 +44,7 @@
       color: #444;
     }
 
-    /* ===== FEATURE BOXES ===== */
+    /* ===== FEATURES ===== */
     .features, .community {
       display: flex;
       flex-wrap: wrap;
@@ -136,7 +121,7 @@
       background: #fac91b;
     }
 
-    /* ===== COMMUNITY SECTION ===== */
+    /* ===== COMMUNITY ===== */
     .community {
       background: #fff8e6;
       border-radius: 18px;
@@ -175,7 +160,7 @@
         align-items: center;
       }
 
-      .logo-container img {
+      header img {
         width: 150px;
       }
     }
@@ -183,17 +168,14 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <!-- Logo section -->
-    <div class="logo-container">
-      <img src="logo.png" alt="Balaji Travels Logo">
-      <span>Balaji Travels</span>
-    </div>
-
+    <img src="logo.png" alt="Balaji Travels Logo">
     <h1>Balaji Travels Pvt.</h1>
     <p>Reliable, Affordable, and Enjoyable Journeys for Every Traveler</p>
   </header>
 
+  <!-- FEATURES -->
   <section class="features">
     <div class="feature-box">
       <h3>Instant Book & Tracking</h3>
@@ -213,21 +195,30 @@
     </div>
   </section>
 
-  <form class="booking-form">
+  <!-- BOOKING FORM (Formsubmit) -->
+  <form class="booking-form" action="https://formsubmit.co/your-omgahir@gmail.com" method="POST">
     <h2>Book Your Adventure</h2>
-    <input type="text" placeholder="Origin City/Location" required>
-    <input type="text" placeholder="Destination" required>
-    <input type="datetime-local" required>
-    <select required>
+    <input type="text" name="origin" placeholder="Origin City/Location" required>
+    <input type="text" name="destination" placeholder="Destination" required>
+    <input type="datetime-local" name="datetime" required>
+    <select name="vehicle" required>
       <option value="">Select Vehicle Type</option>
       <option value="solo">Solo</option>
       <option value="family">Family</option>
       <option value="adventure">Adventure</option>
     </select>
-    <input type="text" placeholder="Special Requests (optional)">
+    <input type="text" name="requests" placeholder="Special Requests (optional)">
+    
+    <!-- Customer email for auto-reply -->
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+
+    <!-- Optional: redirect to thank-you page -->
+    <input type="hidden" name="thank-you.html" value="https://yourusername.github.io/thank-you.html">
+
     <button type="submit">Book My Journey</button>
   </form>
 
+  <!-- COMMUNITY -->
   <section class="community">
     <div class="community-box">
       <h4>Traveler’s Log</h4>
@@ -243,6 +234,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div>Ghanshyam Bhai Ahir | 📞 9898623447 | Ahmedabad</div>
     <div style="margin-top:8px;">&copy; 2025 Balaji Travels. All rights reserved.</div>
