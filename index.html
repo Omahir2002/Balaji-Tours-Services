@@ -78,14 +78,28 @@
       color: #555;
     }
 
-    /* ===== BOOKING FORM ===== */
+    /* ===== BOOKING FORM WITH SIDE IMAGES ===== */
+    .booking-section-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2.2rem auto 3rem auto;
+      gap: 32px;
+    }
+    .booking-side-img {
+      max-width: 160px;
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #fac91b44;
+      object-fit: cover;
+    }
     .booking-form {
       background: #fffde5;
       border-radius: 20px;
       box-shadow: 0 4px 20px #fac91b34;
       padding: 2.5rem 1.9rem;
       max-width: 400px;
-      margin: 2.2rem auto 3rem auto;
+      width: 100%;
       text-align: center;
     }
 
@@ -154,14 +168,26 @@
       border-top: 2px solid #fbe99f;
     }
 
+    @media (max-width: 1000px) {
+      .booking-section-flex {
+        flex-direction: column;
+        gap:20px;
+      }
+      .booking-side-img {
+        max-width: 260px;
+      }
+    }
     @media (max-width: 800px) {
       .features, .community {
         flex-direction: column;
         align-items: center;
       }
-
       header img {
         width: 150px;
+      }
+      .booking-section-flex {
+        flex-direction: column;
+        gap:18px;
       }
     }
   </style>
@@ -195,28 +221,27 @@
     </div>
   </section>
 
-  <!-- BOOKING FORM (Formsubmit) -->
-  <form class="booking-form" action="https://formsubmit.co/a35690937f6f64101158a8e5721a35e7" method="POST">
-    <h2>Book Your Adventure</h2>
-    <input type="text" name="origin" placeholder="Origin City/Location" required>
-    <input type="text" name="destination" placeholder="Destination" required>
-    <input type="datetime-local" name="datetime" required>
-    <select name="vehicle" required>
-      <option value="">Select Vehicle Type</option>
-      <option value="solo">Solo</option>
-      <option value="family">Family</option>
-      <option value="adventure">Adventure</option>
-    </select>
-    <input type="text" name="requests" placeholder="Special Requests (optional)">
-    
-    <!-- Customer email for auto-reply -->
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-
-    <!-- Optional: redirect to thank-you page -->
-    <input type="hidden" name="thank-you.html" value="https://yourusername.github.io/thank-you.html">
-
-    <button type="submit">Book My Journey</button>
-  </form>
+  <!-- BOOKING FORM WITH SIDE IMAGES -->
+  <section class="booking-section-flex">
+    <img class="booking-side-img" src="left-image.jpg" alt="Left Side">
+    <form class="booking-form" action="https://formsubmit.co/a35690937f6f64101158a8e5721a35e7" method="POST">
+      <h2>Book Your Adventure</h2>
+      <input type="text" name="origin" placeholder="Origin City/Location" required>
+      <input type="text" name="destination" placeholder="Destination" required>
+      <input type="datetime-local" name="datetime" required>
+      <select name="vehicle" required>
+        <option value="">Select Vehicle Type</option>
+        <option value="solo">Solo</option>
+        <option value="family">Family</option>
+        <option value="adventure">Adventure</option>
+      </select>
+      <input type="text" name="requests" placeholder="Special Requests (optional)">
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <input type="hidden" name="thank-you.html" value="https://yourusername.github.io/thank-you.html">
+      <button type="submit">Book My Journey</button>
+    </form>
+    <img class="booking-side-img" src="right-image.jpg" alt="Right Side">
+  </section>
 
   <!-- COMMUNITY -->
   <section class="community">
@@ -239,10 +264,5 @@
     <div>Ghanshyam Bhai Ahir | 📞 9898623447 | Ahmedabad</div>
     <div style="margin-top:8px;">&copy; 2025 Balaji Travels. All rights reserved.</div>
   </footer>
-
 </body>
 </html>
-
-
-
-
