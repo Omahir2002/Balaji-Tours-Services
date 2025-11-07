@@ -85,14 +85,22 @@
       align-items: center;
       margin: 2.2rem auto 3rem auto;
       gap: 32px;
+      flex-wrap: wrap;
     }
+
     .booking-side-img {
-      max-width: 160px;
+      max-width: 220px;
       width: 100%;
       border-radius: 18px;
-      box-shadow: 0 2px 12px #fac91b44;
+      box-shadow: 0 4px 14px #fac91b55;
       object-fit: cover;
+      transition: transform 0.3s ease;
     }
+
+    .booking-side-img:hover {
+      transform: scale(1.05);
+    }
+
     .booking-form {
       background: #fffde5;
       border-radius: 20px;
@@ -171,23 +179,10 @@
     @media (max-width: 1000px) {
       .booking-section-flex {
         flex-direction: column;
-        gap:20px;
+        gap: 20px;
       }
       .booking-side-img {
-        max-width: 260px;
-      }
-    }
-    @media (max-width: 800px) {
-      .features, .community {
-        flex-direction: column;
-        align-items: center;
-      }
-      header img {
-        width: 150px;
-      }
-      .booking-section-flex {
-        flex-direction: column;
-        gap:18px;
+        max-width: 280px;
       }
     }
   </style>
@@ -223,7 +218,8 @@
 
   <!-- BOOKING FORM WITH SIDE IMAGES -->
   <section class="booking-section-flex">
-    <img class="booking-side-img" src="left-image.jpg" alt="Left Side">
+    <img class="booking-side-img" src="ertiga.jpg" alt="Ertiga Car Image">
+    
     <form class="booking-form" action="https://formsubmit.co/a35690937f6f64101158a8e5721a35e7" method="POST">
       <h2>Book Your Adventure</h2>
       <input type="text" name="origin" placeholder="Origin City/Location" required>
@@ -240,7 +236,8 @@
       <input type="hidden" name="thank-you.html" value="https://yourusername.github.io/thank-you.html">
       <button type="submit">Book My Journey</button>
     </form>
-    <img class="booking-side-img" src="right-image.jpg" alt="Right Side">
+
+    <img class="booking-side-img" src="urbania.jpg" alt="Urbania Car Image">
   </section>
 
   <!-- COMMUNITY -->
